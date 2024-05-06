@@ -1,0 +1,16 @@
+# migrasidan-model
+DB_DATABASE=db_laravel_10
+DB_USERNAME=root
+DB_PASSWORD=
+public function up(): void
+{
+    Schema::create('posts', function (Blueprint $table) {
+        $table->id();
+        $table->string('image');
+        $table->string('title');
+        $table->text('content');
+        $table->timestamps();
+    });
+}
+php artisan make:model Post -m
+
